@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1 (Python 3.9.6 on darwin)" generated="20230615 23:02:36.070" rpa="false" schemaversion="4">
+<suite id="s1" name="AlbertHeijnRobotFramework" source="/Users/larsdebruijn/AlbertHeijnRobotFramework">
+<suite id="s1-s1" name="Test" source="/Users/larsdebruijn/AlbertHeijnRobotFramework/test">
+<suite id="s1-s1-s1" name="Testcases" source="/Users/larsdebruijn/AlbertHeijnRobotFramework/test/testcases">
+<suite id="s1-s1-s1-s1" name="CookiePopupTestSuite" source="/Users/larsdebruijn/AlbertHeijnRobotFramework/test/testcases/CookiePopupTestSuite.robot">
+<test id="s1-s1-s1-s1-t1" name="User accepts social media and personalised ads cookies" line="31">
+<kw name="Before Test" type="SETUP">
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>Chrome</arg>
+<arg>test/drivers/chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20230615 23:02:36.304" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20230615 23:02:36.304" endtime="20230615 23:02:38.530"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${homePage}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230615 23:02:38.532" level="INFO">Opening url 'https://www.ah.nl'</msg>
+<status status="PASS" starttime="20230615 23:02:38.531" endtime="20230615 23:02:41.952"/>
+</kw>
+<status status="PASS" starttime="20230615 23:02:36.303" endtime="20230615 23:02:41.952"/>
+</kw>
+<kw name="Accept social media cookies" library="mainPageStepDefinitions">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${accept_socialmedia_cookies_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230615 23:02:41.954" level="INFO">Clicking element 'id:social-accept'.</msg>
+<msg timestamp="20230615 23:02:42.327" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230615 23:02:42.328" level="FAIL">ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=114.0.5735.133)
+Stacktrace:
+0   chromedriver                        0x00000001074056b8 chromedriver + 4937400
+1   chromedriver                        0x00000001073fcb73 chromedriver + 4901747
+2   chromedriver                        0x0000000106fba490 chromedriver + 435344
+3   chromedriver                        0x0000000106fff8ac chromedriver + 719020
+4   chromedriver                        0x0000000106ff21e1 chromedriver + 664033
+5   chromedriver                        0x0000000107022012 chromedriver + 860178
+6   chromedriver                        0x0000000106ff19c1 chromedriver + 661953
+7   chromedriver                        0x00000001070221ce chromedriver + 860622
+8   chromedriver                        0x000000010703ce76 chromedriver + 970358
+9   chromedriver                        0x0000000107021de3 chromedriver + 859619
+10  chromedriver                        0x0000000106fefd7f chromedriver + 654719
+11  chromedriver                        0x0000000106ff10de chromedriver + 659678
+12  chromedriver                        0x00000001073c12ad chromedriver + 4657837
+13  chromedriver                        0x00000001073c6130 chromedriver + 4677936
+14  chromedriver                        0x00000001073ccdef chromedriver + 4705775
+15  chromedriver                        0x00000001073c705a chromedriver + 4681818
+16  chromedriver                        0x000000010739992c chromedriver + 4495660
+17  chromedriver                        0x00000001073e4838 chromedriver + 4802616
+18  chromedriver                        0x00000001073e49b7 chromedriver + 4802999
+19  chromedriver                        0x00000001073f599f chromedriver + 4872607
+20  libsystem_pthread.dylib             0x00007ff816b7f1d3 _pthread_start + 125
+21  libsystem_pthread.dylib             0x00007ff816b7abd3 thread_start + 15
+</msg>
+<status status="FAIL" starttime="20230615 23:02:41.953" endtime="20230615 23:02:42.348"/>
+</kw>
+<status status="FAIL" starttime="20230615 23:02:41.953" endtime="20230615 23:02:42.348"/>
+</kw>
+<kw name="Accept personalised ads cookies" library="mainPageStepDefinitions">
+<status status="NOT RUN" starttime="20230615 23:02:42.349" endtime="20230615 23:02:42.349"/>
+</kw>
+<kw name="Confirm cookie settings" library="mainPageStepDefinitions">
+<status status="NOT RUN" starttime="20230615 23:02:42.349" endtime="20230615 23:02:42.349"/>
+</kw>
+<kw name="After Test" type="TEARDOWN">
+<kw name="Delete All Cookies" library="SeleniumLibrary">
+<doc>Deletes all cookies.</doc>
+<status status="PASS" starttime="20230615 23:02:42.350" endtime="20230615 23:02:42.505"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230615 23:02:42.505" endtime="20230615 23:02:42.652"/>
+</kw>
+<status status="PASS" starttime="20230615 23:02:42.350" endtime="20230615 23:02:42.653"/>
+</kw>
+<status status="FAIL" starttime="20230615 23:02:36.303" endtime="20230615 23:02:42.653">ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=114.0.5735.133)
+Stacktrace:
+0   chromedriver                        0x00000001074056b8 chromedriver + 4937400
+1   chromedriver                        0x00000001073fcb73 chromedriver + 4901747
+2   chromedriver                        0x0000000106fba490 chromedriver + 435344
+3   chromedriver                        0x0000000106fff8ac chromedriver + 719020
+4   chromedriver                        0x0000000106ff21e1 chromedriver + 664033
+5   chromedriver                        0x0000000107022012 chromedriver + 860178
+6   chromedriver                        0x0000000106ff19c1 chromedriver + 661953
+7   chromedriver                        0x00000001070221ce chromedriver + 860622
+8   chromedriver                        0x000000010703ce76 chromedriver + 9...
+    [ Message content over the limit has been removed. ]
+...hromedriver                        0x0000000106ff10de chromedriver + 659678
+12  chromedriver                        0x00000001073c12ad chromedriver + 4657837
+13  chromedriver                        0x00000001073c6130 chromedriver + 4677936
+14  chromedriver                        0x00000001073ccdef chromedriver + 4705775
+15  chromedriver                        0x00000001073c705a chromedriver + 4681818
+16  chromedriver                        0x000000010739992c chromedriver + 4495660
+17  chromedriver                        0x00000001073e4838 chromedriver + 4802616
+18  chromedriver                        0x00000001073e49b7 chromedriver + 4802999
+19  chromedriver                        0x00000001073f599f chromedriver + 4872607
+20  libsystem_pthread.dylib             0x00007ff816b7f1d3 _pthread_start + 125
+21  libsystem_pthread.dylib             0x00007ff816b7abd3 thread_start + 15</status>
+</test>
+<status status="FAIL" starttime="20230615 23:02:36.106" endtime="20230615 23:02:42.654"/>
+</suite>
+<status status="FAIL" starttime="20230615 23:02:36.103" endtime="20230615 23:02:42.656"/>
+</suite>
+<status status="FAIL" starttime="20230615 23:02:36.100" endtime="20230615 23:02:42.658"/>
+</suite>
+<status status="FAIL" starttime="20230615 23:02:36.073" endtime="20230615 23:02:42.659"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="AlbertHeijnRobotFramework">AlbertHeijnRobotFramework</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Test">AlbertHeijnRobotFramework.Test</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="Testcases">AlbertHeijnRobotFramework.Test.Testcases</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1-s1" name="CookiePopupTestSuite">AlbertHeijnRobotFramework.Test.Testcases.CookiePopupTestSuite</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
