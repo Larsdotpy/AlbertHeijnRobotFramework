@@ -1,15 +1,15 @@
 *** Settings ***
-Resource    ../enums/enum.robot
-Resource    test/stepdefinitions/mainPageStepDefinitions.robot
-Test Setup  Before Test
-Test Teardown    After Test
-Library     SeleniumLibrary
+Resource            ../enums/enum.robot
+Resource            test/stepdefinitions/mainPageStepDefinitions.robot
+Test Setup          Before Test
+Test Teardown       After Test
+Library             SeleniumLibrary
 
 
 *** Keywords ***
 Before Test
     Create Webdriver    Chrome      test/drivers/chrome
-    Go to               ${homePage}
+    Go to               ${homePage_URL}
 
 After Test
     Delete All Cookies
@@ -32,3 +32,14 @@ User accepts social media and personalised ads cookies
     Accept Social Media Cookies
     Accept Personalised Ads Cookies
     Confirm Cookie Settings
+
+User declines social media and personalised ads cookies
+    Decline Socal Media Cookies
+    Decline Personalised Ads Cookies
+    Confirm Cookie Settings
+
+User opens 'Privacybeleid' from cookie popup
+    Open Privacybeleid
+
+User opens 'Cookiebeleid' from cookie popup
+    Open Cookiebeleid

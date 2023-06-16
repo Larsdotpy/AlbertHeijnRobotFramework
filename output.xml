@@ -1,0 +1,672 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1 (Python 3.9.6 on darwin)" generated="20230616 16:00:20.679" rpa="false" schemaversion="4">
+<suite id="s1" name="AlbertHeijnRobotFramework" source="/Users/larsdebruijn/AlbertHeijnRobotFramework">
+<suite id="s1-s1" name="Test" source="/Users/larsdebruijn/AlbertHeijnRobotFramework/test">
+<suite id="s1-s1-s1" name="Testcases" source="/Users/larsdebruijn/AlbertHeijnRobotFramework/test/testcases">
+<suite id="s1-s1-s1-s1" name="FeedbackTestSuite" source="/Users/larsdebruijn/AlbertHeijnRobotFramework/test/testcases/FeedbackTestSuite.robot">
+<test id="s1-s1-s1-s1-t1" name="User gives a 5 star feedback on 'Deze specifieke pagina' categories" line="23">
+<kw name="Before Test" type="SETUP">
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>Chrome</arg>
+<arg>test/drivers/chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20230616 16:00:20.985" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20230616 16:00:20.985" endtime="20230616 16:00:23.701"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${homePage_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230616 16:00:23.702" level="INFO">Opening url 'https://www.ah.nl'</msg>
+<status status="PASS" starttime="20230616 16:00:23.701" endtime="20230616 16:00:26.642"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${cookie_popup}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230616 16:00:26.642" endtime="20230616 16:00:26.860"/>
+</kw>
+<kw name="Accept cookie popup" library="mainPageStepDefinitions">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${cookie_accept_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230616 16:00:26.861" level="INFO">Clicking element 'id:accept-cookies'.</msg>
+<status status="PASS" starttime="20230616 16:00:26.861" endtime="20230616 16:00:29.435"/>
+</kw>
+<status status="PASS" starttime="20230616 16:00:26.861" endtime="20230616 16:00:29.435"/>
+</kw>
+<status status="PASS" starttime="20230616 16:00:20.984" endtime="20230616 16:00:29.435"/>
+</kw>
+<kw name="Open feedback form" library="mainPageStepDefinitions">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${open_feedback_btn}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230616 16:00:29.436" endtime="20230616 16:00:30.338"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${open_feedback_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230616 16:00:30.339" level="INFO">Clicking element 'class:notranslate.btn-open-survey.btn.btn-primary.tab.tab-right.survey-default.allow-button.button-float.no-icon'.</msg>
+<status status="PASS" starttime="20230616 16:00:30.338" endtime="20230616 16:00:30.726"/>
+</kw>
+<status status="PASS" starttime="20230616 16:00:29.436" endtime="20230616 16:00:30.726"/>
+</kw>
+<kw name="Select 'Deze specifieke pagina'" library="mainPageStepDefinitions">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${deze_specifieke_pagina_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230616 16:00:30.727" level="INFO">Clicking element 'xpath://label[@for='radio-2348_0']'.</msg>
+<status status="PASS" starttime="20230616 16:00:30.726" endtime="20230616 16:00:31.089"/>
+</kw>
+<status status="PASS" starttime="20230616 16:00:30.726" endtime="20230616 16:00:31.089"/>
+</kw>
+<kw name="Select 5 star rating" library="mainPageStepDefinitions">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${5_star_rating_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230616 16:00:31.091" level="INFO">Clicking element 'class:ui-stars-star.star_5'.</msg>
+<status status="PASS" starttime="20230616 16:00:31.090" endtime="20230616 16:00:31.263"/>
+</kw>
+<status status="PASS" starttime="20230616 16:00:31.089" endtime="20230616 16:00:31.263"/>
+</kw>
+<kw name="Send mock data feedback" library="mainPageStepDefinitions">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${feedback_input_field}</arg>
+<arg>test</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230616 16:00:31.265" level="INFO">Typing text 'test' into text field 'id:element-input-2349'.</msg>
+<status status="PASS" starttime="20230616 16:00:31.264" endtime="20230616 16:00:31.626"/>
+</kw>
+<status status="PASS" starttime="20230616 16:00:31.264" endtime="20230616 16:00:31.626"/>
+</kw>
+<kw name="Select screenshot" library="mainPageStepDefinitions">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${feedback_screenshot_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230616 16:00:31.627" level="INFO">Clicking element 'class:mopicon.mopicon-camera'.</msg>
+<status status="PASS" starttime="20230616 16:00:31.626" endtime="20230616 16:00:31.767"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${home_logo_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230616 16:00:31.768" level="INFO">Clicking element 'class:nav-logo_logo__c28jK'.</msg>
+<status status="PASS" starttime="20230616 16:00:31.767" endtime="20230616 16:00:31.921"/>
+</kw>
+<status status="PASS" starttime="20230616 16:00:31.626" endtime="20230616 16:00:31.921"/>
+</kw>
+<kw name="Send feedback form" library="mainPageStepDefinitions">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${verstuur_feedback_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230616 16:00:31.923" level="INFO">Clicking element 'xpath://div[contains(text(),'Verstuur')]'.</msg>
+<status status="PASS" starttime="20230616 16:00:31.922" endtime="20230616 16:00:32.077"/>
+</kw>
+<status status="PASS" starttime="20230616 16:00:31.922" endtime="20230616 16:00:32.077"/>
+</kw>
+<kw name="After Test" type="TEARDOWN">
+<kw name="Delete All Cookies" library="SeleniumLibrary">
+<doc>Deletes all cookies.</doc>
+<status status="PASS" starttime="20230616 16:00:32.078" endtime="20230616 16:00:32.524"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230616 16:00:32.524" endtime="20230616 16:00:32.753"/>
+</kw>
+<status status="PASS" starttime="20230616 16:00:32.077" endtime="20230616 16:00:32.753"/>
+</kw>
+<status status="PASS" starttime="20230616 16:00:20.984" endtime="20230616 16:00:32.753"/>
+</test>
+<test id="s1-s1-s1-s1-t2" name="User gives a 4 star feedback on 'De gehele website' categories" line="31">
+<kw name="Before Test" type="SETUP">
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>Chrome</arg>
+<arg>test/drivers/chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20230616 16:00:32.755" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20230616 16:00:32.755" endtime="20230616 16:00:35.089"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${homePage_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230616 16:00:35.090" level="INFO">Opening url 'https://www.ah.nl'</msg>
+<status status="PASS" starttime="20230616 16:00:35.089" endtime="20230616 16:00:37.500"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${cookie_popup}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230616 16:00:37.501" endtime="20230616 16:00:37.879"/>
+</kw>
+<kw name="Accept cookie popup" library="mainPageStepDefinitions">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${cookie_accept_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230616 16:00:37.880" level="INFO">Clicking element 'id:accept-cookies'.</msg>
+<status status="PASS" starttime="20230616 16:00:37.879" endtime="20230616 16:00:39.875"/>
+</kw>
+<status status="PASS" starttime="20230616 16:00:37.879" endtime="20230616 16:00:39.876"/>
+</kw>
+<status status="PASS" starttime="20230616 16:00:32.754" endtime="20230616 16:00:39.876"/>
+</kw>
+<kw name="Open feedback form" library="mainPageStepDefinitions">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${open_feedback_btn}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230616 16:00:39.877" endtime="20230616 16:00:41.409"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${open_feedback_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230616 16:00:41.410" level="INFO">Clicking element 'class:notranslate.btn-open-survey.btn.btn-primary.tab.tab-right.survey-default.allow-button.button-float.no-icon'.</msg>
+<status status="PASS" starttime="20230616 16:00:41.409" endtime="20230616 16:00:41.962"/>
+</kw>
+<status status="PASS" starttime="20230616 16:00:39.877" endtime="20230616 16:00:41.962"/>
+</kw>
+<kw name="Select 'De gehele website'" library="mainPageStepDefinitions">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${de_gehele_website_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230616 16:00:41.963" level="INFO">Clicking element 'xpath://label[@for='radio-2348_1']'.</msg>
+<status status="PASS" starttime="20230616 16:00:41.962" endtime="20230616 16:00:42.229"/>
+</kw>
+<status status="PASS" starttime="20230616 16:00:41.962" endtime="20230616 16:00:42.229"/>
+</kw>
+<kw name="Select 4 star rating" library="mainPageStepDefinitions">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${4_star_rating_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230616 16:00:42.231" level="INFO">Clicking element 'class:ui-stars-star.star_4'.</msg>
+<status status="PASS" starttime="20230616 16:00:42.230" endtime="20230616 16:00:42.374"/>
+</kw>
+<status status="PASS" starttime="20230616 16:00:42.229" endtime="20230616 16:00:42.375"/>
+</kw>
+<kw name="Send mock data feedback" library="mainPageStepDefinitions">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${feedback_input_field}</arg>
+<arg>test</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230616 16:00:42.377" level="INFO">Typing text 'test' into text field 'id:element-input-2349'.</msg>
+<status status="PASS" starttime="20230616 16:00:42.376" endtime="20230616 16:00:42.689"/>
+</kw>
+<status status="PASS" starttime="20230616 16:00:42.375" endtime="20230616 16:00:42.689"/>
+</kw>
+<kw name="Select screenshot" library="mainPageStepDefinitions">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${feedback_screenshot_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230616 16:00:42.690" level="INFO">Clicking element 'class:mopicon.mopicon-camera'.</msg>
+<status status="PASS" starttime="20230616 16:00:42.690" endtime="20230616 16:00:42.835"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${home_logo_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230616 16:00:42.836" level="INFO">Clicking element 'class:nav-logo_logo__c28jK'.</msg>
+<status status="PASS" starttime="20230616 16:00:42.835" endtime="20230616 16:00:42.993"/>
+</kw>
+<status status="PASS" starttime="20230616 16:00:42.690" endtime="20230616 16:00:42.993"/>
+</kw>
+<kw name="Send feedback form" library="mainPageStepDefinitions">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${verstuur_feedback_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230616 16:00:42.995" level="INFO">Clicking element 'xpath://div[contains(text(),'Verstuur')]'.</msg>
+<status status="PASS" starttime="20230616 16:00:42.994" endtime="20230616 16:00:43.165"/>
+</kw>
+<status status="PASS" starttime="20230616 16:00:42.993" endtime="20230616 16:00:43.166"/>
+</kw>
+<kw name="After Test" type="TEARDOWN">
+<kw name="Delete All Cookies" library="SeleniumLibrary">
+<doc>Deletes all cookies.</doc>
+<status status="PASS" starttime="20230616 16:00:43.167" endtime="20230616 16:00:43.618"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230616 16:00:43.619" endtime="20230616 16:00:43.813"/>
+</kw>
+<status status="PASS" starttime="20230616 16:00:43.166" endtime="20230616 16:00:43.814"/>
+</kw>
+<status status="PASS" starttime="20230616 16:00:32.754" endtime="20230616 16:00:43.814"/>
+</test>
+<test id="s1-s1-s1-s1-t3" name="User gives a 3 star feedback on 'Aanbod en beschikbaarheid van producten' categories" line="39">
+<kw name="Before Test" type="SETUP">
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>Chrome</arg>
+<arg>test/drivers/chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20230616 16:00:43.820" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20230616 16:00:43.817" endtime="20230616 16:00:46.082"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${homePage_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230616 16:00:46.083" level="INFO">Opening url 'https://www.ah.nl'</msg>
+<status status="PASS" starttime="20230616 16:00:46.083" endtime="20230616 16:00:48.543"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${cookie_popup}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230616 16:00:48.544" endtime="20230616 16:00:48.911"/>
+</kw>
+<kw name="Accept cookie popup" library="mainPageStepDefinitions">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${cookie_accept_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230616 16:00:48.912" level="INFO">Clicking element 'id:accept-cookies'.</msg>
+<status status="PASS" starttime="20230616 16:00:48.912" endtime="20230616 16:00:55.050"/>
+</kw>
+<status status="PASS" starttime="20230616 16:00:48.911" endtime="20230616 16:00:55.051"/>
+</kw>
+<status status="PASS" starttime="20230616 16:00:43.816" endtime="20230616 16:00:55.051"/>
+</kw>
+<kw name="Open feedback form" library="mainPageStepDefinitions">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${open_feedback_btn}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230616 16:00:55.052" endtime="20230616 16:00:55.866"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${open_feedback_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230616 16:00:55.867" level="INFO">Clicking element 'class:notranslate.btn-open-survey.btn.btn-primary.tab.tab-right.survey-default.allow-button.button-float.no-icon'.</msg>
+<status status="PASS" starttime="20230616 16:00:55.866" endtime="20230616 16:00:56.471"/>
+</kw>
+<status status="PASS" starttime="20230616 16:00:55.051" endtime="20230616 16:00:56.471"/>
+</kw>
+<kw name="Select 'De gehele website'" library="mainPageStepDefinitions">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${de_gehele_website_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230616 16:00:56.473" level="INFO">Clicking element 'xpath://label[@for='radio-2348_1']'.</msg>
+<status status="PASS" starttime="20230616 16:00:56.472" endtime="20230616 16:00:56.610"/>
+</kw>
+<status status="PASS" starttime="20230616 16:00:56.472" endtime="20230616 16:00:56.610"/>
+</kw>
+<kw name="Select 3 star rating" library="mainPageStepDefinitions">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${3_star_rating_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230616 16:00:56.612" level="INFO">Clicking element 'class:ui-stars-star.star_3'.</msg>
+<status status="PASS" starttime="20230616 16:00:56.611" endtime="20230616 16:00:56.715"/>
+</kw>
+<status status="PASS" starttime="20230616 16:00:56.610" endtime="20230616 16:00:56.716"/>
+</kw>
+<kw name="Send mock data feedback" library="mainPageStepDefinitions">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${feedback_input_field}</arg>
+<arg>test</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230616 16:00:56.718" level="INFO">Typing text 'test' into text field 'id:element-input-2349'.</msg>
+<status status="PASS" starttime="20230616 16:00:56.718" endtime="20230616 16:00:57.041"/>
+</kw>
+<status status="PASS" starttime="20230616 16:00:56.717" endtime="20230616 16:00:57.041"/>
+</kw>
+<kw name="Select screenshot" library="mainPageStepDefinitions">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${feedback_screenshot_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230616 16:00:57.043" level="INFO">Clicking element 'class:mopicon.mopicon-camera'.</msg>
+<status status="PASS" starttime="20230616 16:00:57.042" endtime="20230616 16:00:57.225"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${home_logo_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230616 16:00:57.226" level="INFO">Clicking element 'class:nav-logo_logo__c28jK'.</msg>
+<status status="PASS" starttime="20230616 16:00:57.226" endtime="20230616 16:00:57.424"/>
+</kw>
+<status status="PASS" starttime="20230616 16:00:57.042" endtime="20230616 16:00:57.425"/>
+</kw>
+<kw name="Send feedback form" library="mainPageStepDefinitions">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${verstuur_feedback_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230616 16:00:57.426" level="INFO">Clicking element 'xpath://div[contains(text(),'Verstuur')]'.</msg>
+<status status="PASS" starttime="20230616 16:00:57.425" endtime="20230616 16:00:57.589"/>
+</kw>
+<status status="PASS" starttime="20230616 16:00:57.425" endtime="20230616 16:00:57.589"/>
+</kw>
+<kw name="After Test" type="TEARDOWN">
+<kw name="Delete All Cookies" library="SeleniumLibrary">
+<doc>Deletes all cookies.</doc>
+<status status="PASS" starttime="20230616 16:00:57.591" endtime="20230616 16:00:57.973"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230616 16:00:57.973" endtime="20230616 16:00:58.168"/>
+</kw>
+<status status="PASS" starttime="20230616 16:00:57.590" endtime="20230616 16:00:58.168"/>
+</kw>
+<status status="PASS" starttime="20230616 16:00:43.815" endtime="20230616 16:00:58.169"/>
+</test>
+<test id="s1-s1-s1-s1-t4" name="User gives a 2 star feedback on 'De Albert Heijn app' categories" line="47">
+<kw name="Before Test" type="SETUP">
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>Chrome</arg>
+<arg>test/drivers/chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20230616 16:00:58.173" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20230616 16:00:58.172" endtime="20230616 16:01:00.565"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${homePage_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230616 16:01:00.567" level="INFO">Opening url 'https://www.ah.nl'</msg>
+<status status="PASS" starttime="20230616 16:01:00.566" endtime="20230616 16:01:03.817"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${cookie_popup}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230616 16:01:03.817" endtime="20230616 16:01:03.889"/>
+</kw>
+<kw name="Accept cookie popup" library="mainPageStepDefinitions">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${cookie_accept_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230616 16:01:03.891" level="INFO">Clicking element 'id:accept-cookies'.</msg>
+<status status="PASS" starttime="20230616 16:01:03.890" endtime="20230616 16:01:06.127"/>
+</kw>
+<status status="PASS" starttime="20230616 16:01:03.889" endtime="20230616 16:01:06.127"/>
+</kw>
+<status status="PASS" starttime="20230616 16:00:58.171" endtime="20230616 16:01:06.127"/>
+</kw>
+<kw name="Open feedback form" library="mainPageStepDefinitions">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${open_feedback_btn}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230616 16:01:06.128" endtime="20230616 16:01:07.547"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${open_feedback_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230616 16:01:07.548" level="INFO">Clicking element 'class:notranslate.btn-open-survey.btn.btn-primary.tab.tab-right.survey-default.allow-button.button-float.no-icon'.</msg>
+<status status="PASS" starttime="20230616 16:01:07.547" endtime="20230616 16:01:07.805"/>
+</kw>
+<status status="PASS" starttime="20230616 16:01:06.128" endtime="20230616 16:01:07.805"/>
+</kw>
+<kw name="Select 'De gehele website'" library="mainPageStepDefinitions">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${de_gehele_website_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230616 16:01:07.806" level="INFO">Clicking element 'xpath://label[@for='radio-2348_1']'.</msg>
+<status status="PASS" starttime="20230616 16:01:07.806" endtime="20230616 16:01:08.300"/>
+</kw>
+<status status="PASS" starttime="20230616 16:01:07.805" endtime="20230616 16:01:08.300"/>
+</kw>
+<kw name="Select 2 star rating" library="mainPageStepDefinitions">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${2_star_rating_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230616 16:01:08.302" level="INFO">Clicking element 'class:ui-stars-star.star_2'.</msg>
+<status status="PASS" starttime="20230616 16:01:08.301" endtime="20230616 16:01:08.401"/>
+</kw>
+<status status="PASS" starttime="20230616 16:01:08.301" endtime="20230616 16:01:08.401"/>
+</kw>
+<kw name="Send mock data feedback" library="mainPageStepDefinitions">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${feedback_input_field}</arg>
+<arg>test</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230616 16:01:08.403" level="INFO">Typing text 'test' into text field 'id:element-input-2349'.</msg>
+<status status="PASS" starttime="20230616 16:01:08.402" endtime="20230616 16:01:08.733"/>
+</kw>
+<status status="PASS" starttime="20230616 16:01:08.402" endtime="20230616 16:01:08.733"/>
+</kw>
+<kw name="Select screenshot" library="mainPageStepDefinitions">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${feedback_screenshot_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230616 16:01:08.734" level="INFO">Clicking element 'class:mopicon.mopicon-camera'.</msg>
+<status status="PASS" starttime="20230616 16:01:08.734" endtime="20230616 16:01:08.870"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${home_logo_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230616 16:01:08.871" level="INFO">Clicking element 'class:nav-logo_logo__c28jK'.</msg>
+<status status="PASS" starttime="20230616 16:01:08.870" endtime="20230616 16:01:09.040"/>
+</kw>
+<status status="PASS" starttime="20230616 16:01:08.733" endtime="20230616 16:01:09.040"/>
+</kw>
+<kw name="Send feedback form" library="mainPageStepDefinitions">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${verstuur_feedback_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230616 16:01:09.042" level="INFO">Clicking element 'xpath://div[contains(text(),'Verstuur')]'.</msg>
+<status status="PASS" starttime="20230616 16:01:09.041" endtime="20230616 16:01:09.240"/>
+</kw>
+<status status="PASS" starttime="20230616 16:01:09.040" endtime="20230616 16:01:09.241"/>
+</kw>
+<kw name="After Test" type="TEARDOWN">
+<kw name="Delete All Cookies" library="SeleniumLibrary">
+<doc>Deletes all cookies.</doc>
+<status status="PASS" starttime="20230616 16:01:09.242" endtime="20230616 16:01:09.574"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230616 16:01:09.575" endtime="20230616 16:01:09.810"/>
+</kw>
+<status status="PASS" starttime="20230616 16:01:09.242" endtime="20230616 16:01:09.810"/>
+</kw>
+<status status="PASS" starttime="20230616 16:00:58.170" endtime="20230616 16:01:09.810"/>
+</test>
+<test id="s1-s1-s1-s1-t5" name="User gives a 1 star feedback on 'Anders' categories" line="55">
+<kw name="Before Test" type="SETUP">
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>Chrome</arg>
+<arg>test/drivers/chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20230616 16:01:09.813" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20230616 16:01:09.812" endtime="20230616 16:01:12.153"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${homePage_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230616 16:01:12.154" level="INFO">Opening url 'https://www.ah.nl'</msg>
+<status status="PASS" starttime="20230616 16:01:12.153" endtime="20230616 16:01:14.839"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${cookie_popup}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230616 16:01:14.839" endtime="20230616 16:01:14.983"/>
+</kw>
+<kw name="Accept cookie popup" library="mainPageStepDefinitions">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${cookie_accept_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230616 16:01:14.984" level="INFO">Clicking element 'id:accept-cookies'.</msg>
+<status status="PASS" starttime="20230616 16:01:14.984" endtime="20230616 16:01:17.531"/>
+</kw>
+<status status="PASS" starttime="20230616 16:01:14.984" endtime="20230616 16:01:17.531"/>
+</kw>
+<status status="PASS" starttime="20230616 16:01:09.812" endtime="20230616 16:01:17.531"/>
+</kw>
+<kw name="Open feedback form" library="mainPageStepDefinitions">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${open_feedback_btn}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230616 16:01:17.532" endtime="20230616 16:01:18.848"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${open_feedback_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230616 16:01:18.849" level="INFO">Clicking element 'class:notranslate.btn-open-survey.btn.btn-primary.tab.tab-right.survey-default.allow-button.button-float.no-icon'.</msg>
+<status status="PASS" starttime="20230616 16:01:18.848" endtime="20230616 16:01:19.315"/>
+</kw>
+<status status="PASS" starttime="20230616 16:01:17.531" endtime="20230616 16:01:19.315"/>
+</kw>
+<kw name="Select 'De gehele website'" library="mainPageStepDefinitions">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${de_gehele_website_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230616 16:01:19.316" level="INFO">Clicking element 'xpath://label[@for='radio-2348_1']'.</msg>
+<status status="PASS" starttime="20230616 16:01:19.315" endtime="20230616 16:01:19.539"/>
+</kw>
+<status status="PASS" starttime="20230616 16:01:19.315" endtime="20230616 16:01:19.539"/>
+</kw>
+<kw name="Select 1 star rating" library="mainPageStepDefinitions">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${1_star_rating_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230616 16:01:19.541" level="INFO">Clicking element 'class:ui-stars-star.star_1'.</msg>
+<status status="PASS" starttime="20230616 16:01:19.540" endtime="20230616 16:01:19.660"/>
+</kw>
+<status status="PASS" starttime="20230616 16:01:19.540" endtime="20230616 16:01:19.660"/>
+</kw>
+<kw name="Send mock data feedback" library="mainPageStepDefinitions">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${feedback_input_field}</arg>
+<arg>test</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230616 16:01:19.663" level="INFO">Typing text 'test' into text field 'id:element-input-2349'.</msg>
+<status status="PASS" starttime="20230616 16:01:19.661" endtime="20230616 16:01:19.967"/>
+</kw>
+<status status="PASS" starttime="20230616 16:01:19.661" endtime="20230616 16:01:19.967"/>
+</kw>
+<kw name="Select screenshot" library="mainPageStepDefinitions">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${feedback_screenshot_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230616 16:01:19.968" level="INFO">Clicking element 'class:mopicon.mopicon-camera'.</msg>
+<status status="PASS" starttime="20230616 16:01:19.968" endtime="20230616 16:01:20.139"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${home_logo_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230616 16:01:20.140" level="INFO">Clicking element 'class:nav-logo_logo__c28jK'.</msg>
+<status status="PASS" starttime="20230616 16:01:20.139" endtime="20230616 16:01:20.382"/>
+</kw>
+<status status="PASS" starttime="20230616 16:01:19.967" endtime="20230616 16:01:20.383"/>
+</kw>
+<kw name="Send feedback form" library="mainPageStepDefinitions">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${verstuur_feedback_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230616 16:01:20.385" level="INFO">Clicking element 'xpath://div[contains(text(),'Verstuur')]'.</msg>
+<status status="PASS" starttime="20230616 16:01:20.384" endtime="20230616 16:01:20.582"/>
+</kw>
+<status status="PASS" starttime="20230616 16:01:20.383" endtime="20230616 16:01:20.582"/>
+</kw>
+<kw name="After Test" type="TEARDOWN">
+<kw name="Delete All Cookies" library="SeleniumLibrary">
+<doc>Deletes all cookies.</doc>
+<status status="PASS" starttime="20230616 16:01:20.583" endtime="20230616 16:01:20.936"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230616 16:01:20.936" endtime="20230616 16:01:21.148"/>
+</kw>
+<status status="PASS" starttime="20230616 16:01:20.582" endtime="20230616 16:01:21.148"/>
+</kw>
+<status status="PASS" starttime="20230616 16:01:09.811" endtime="20230616 16:01:21.148"/>
+</test>
+<test id="s1-s1-s1-s1-t6" name="User opens 'klantenservice pagina' from feedback form" line="63">
+<kw name="Before Test" type="SETUP">
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>Chrome</arg>
+<arg>test/drivers/chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20230616 16:01:21.151" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20230616 16:01:21.150" endtime="20230616 16:01:23.439"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${homePage_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230616 16:01:23.440" level="INFO">Opening url 'https://www.ah.nl'</msg>
+<status status="PASS" starttime="20230616 16:01:23.440" endtime="20230616 16:01:28.281"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${cookie_popup}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230616 16:01:28.281" endtime="20230616 16:01:28.516"/>
+</kw>
+<kw name="Accept cookie popup" library="mainPageStepDefinitions">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${cookie_accept_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230616 16:01:28.517" level="INFO">Clicking element 'id:accept-cookies'.</msg>
+<status status="PASS" starttime="20230616 16:01:28.517" endtime="20230616 16:01:31.051"/>
+</kw>
+<status status="PASS" starttime="20230616 16:01:28.516" endtime="20230616 16:01:31.051"/>
+</kw>
+<status status="PASS" starttime="20230616 16:01:21.150" endtime="20230616 16:01:31.052"/>
+</kw>
+<kw name="Open feedback form" library="mainPageStepDefinitions">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${open_feedback_btn}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230616 16:01:31.054" endtime="20230616 16:01:31.925"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${open_feedback_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230616 16:01:31.926" level="INFO">Clicking element 'class:notranslate.btn-open-survey.btn.btn-primary.tab.tab-right.survey-default.allow-button.button-float.no-icon'.</msg>
+<status status="PASS" starttime="20230616 16:01:31.926" endtime="20230616 16:01:32.247"/>
+</kw>
+<status status="PASS" starttime="20230616 16:01:31.052" endtime="20230616 16:01:32.248"/>
+</kw>
+<kw name="Open 'klantenservice pagina'" library="mainPageStepDefinitions">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${klantenservice_pagina_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230616 16:01:32.249" level="INFO">Clicking element 'xpath://a[normalize-space()='klantenservice pagina.']'.</msg>
+<status status="PASS" starttime="20230616 16:01:32.249" endtime="20230616 16:01:32.680"/>
+</kw>
+<status status="PASS" starttime="20230616 16:01:32.248" endtime="20230616 16:01:32.680"/>
+</kw>
+<kw name="Check new tab 'klantenservice' opened successfully" library="customerServiceStepDefinitions">
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230616 16:01:37.683" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230616 16:01:32.681" endtime="20230616 16:01:37.683"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>${klantenservice_tab_name}</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20230616 16:01:37.683" endtime="20230616 16:01:37.846"/>
+</kw>
+<kw name="Wait Until Location Is" library="SeleniumLibrary">
+<arg>${klantenservice_URL}</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" starttime="20230616 16:01:37.847" endtime="20230616 16:01:37.852"/>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<arg>${klantenservice_URL}</arg>
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<msg timestamp="20230616 16:01:37.857" level="INFO">Current location is 'https://www.ah.nl/klantenservice'.</msg>
+<status status="PASS" starttime="20230616 16:01:37.852" endtime="20230616 16:01:37.857"/>
+</kw>
+<status status="PASS" starttime="20230616 16:01:32.681" endtime="20230616 16:01:37.857"/>
+</kw>
+<kw name="After Test" type="TEARDOWN">
+<kw name="Delete All Cookies" library="SeleniumLibrary">
+<doc>Deletes all cookies.</doc>
+<status status="PASS" starttime="20230616 16:01:37.857" endtime="20230616 16:01:38.372"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230616 16:01:38.372" endtime="20230616 16:01:38.629"/>
+</kw>
+<status status="PASS" starttime="20230616 16:01:37.857" endtime="20230616 16:01:38.629"/>
+</kw>
+<status status="PASS" starttime="20230616 16:01:21.149" endtime="20230616 16:01:38.630"/>
+</test>
+<status status="PASS" starttime="20230616 16:00:20.712" endtime="20230616 16:01:38.631"/>
+</suite>
+<status status="PASS" starttime="20230616 16:00:20.711" endtime="20230616 16:01:38.634"/>
+</suite>
+<status status="PASS" starttime="20230616 16:00:20.709" endtime="20230616 16:01:38.636"/>
+</suite>
+<status status="PASS" starttime="20230616 16:00:20.682" endtime="20230616 16:01:38.638"/>
+</suite>
+<statistics>
+<total>
+<stat pass="6" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="6" fail="0" skip="0" id="s1" name="AlbertHeijnRobotFramework">AlbertHeijnRobotFramework</stat>
+<stat pass="6" fail="0" skip="0" id="s1-s1" name="Test">AlbertHeijnRobotFramework.Test</stat>
+<stat pass="6" fail="0" skip="0" id="s1-s1-s1" name="Testcases">AlbertHeijnRobotFramework.Test.Testcases</stat>
+<stat pass="6" fail="0" skip="0" id="s1-s1-s1-s1" name="FeedbackTestSuite">AlbertHeijnRobotFramework.Test.Testcases.FeedbackTestSuite</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
