@@ -3,9 +3,9 @@ ${cookie_popup}                                 id:cookie-popup
 ${cookie_accept_btn}                            id:accept-cookies
 ${cookie_decline_btn}                           id:decline-cookies
 ${cookie_settings_btn}                          id:cookie-anchor-config
-${accept_socialmedia_cookies_btn}               css:#social-accept
+${accept_socialmedia_cookies_btn}               xpath=//input[@data-testhook="input-social-accept"]
 ${decline_socialmedia_cookies_btn}              css:#social-decline
-${accept_personalised_ads_cookies_btn}          css:#ad-accept
+${accept_personalised_ads_cookies_btn}          xpath=//input[@data-testhook="input-ad-accept"]
 ${decline_personalised_ads_cookies_btn}         css:#ad-decline
 ${confirm_cookie_settings_btn}                  id:confirm-config
 ${privacybeleid_btn}                            xpath://a[@href='https://ah.nl/privacy']
@@ -26,3 +26,8 @@ ${feedback_screenshot_btn}                      class:mopicon.mopicon-camera
 ${home_logo_btn}                                class:nav-logo_logo__c28jK
 ${verstuur_feedback_btn}                        xpath://div[contains(text(),'Verstuur')]
 ${klantenservice_pagina_btn}                    xpath://a[normalize-space()='klantenservice pagina.']
+${Login_page_btn}                               class:icon-button_root__OTAMW.icon-button_hasContent__1AdFI.navigation-header_userButton__DLA-D
+${search_product_btn}                           xpath://input[@placeholder='Waar ben je naar op zoek?']
+${dropdown_menu_login}                          xpath=//input[@data-testhook="menu-dropdown-button"]
+${homepage_logo_btn}                            class:styles_center__9K5_W
+

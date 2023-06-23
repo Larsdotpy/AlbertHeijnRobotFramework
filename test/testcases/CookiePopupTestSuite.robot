@@ -29,6 +29,7 @@ User opens cookie settings
     Open Cookie Settings
 
 User accepts social media and personalised ads cookies
+    Open Cookie Settings
     Accept Social Media Cookies
     Accept Personalised Ads Cookies
     Confirm Cookie Settings

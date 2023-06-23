@@ -4,19 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6fad9c90-49b1-49e7-a6f9-c332ad6d82d5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/test/stepdefinitions/customerServiceStepDefinitions.robot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/testcases/FeedbackTestSuite.robot" afterDir="false" />
+    <list default="true" id="6fad9c90-49b1-49e7-a6f9-c332ad6d82d5" name="Changes" comment="Added Feedback TestSuite">
+      <change afterPath="$PROJECT_DIR$/test/pages/productPages.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/stepdefinitions/GETstepDefinitions.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/stepdefinitions/productPagesStepDefinitions.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/testcases/API/GET.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/testcases/ProductTestSuite.robot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/log.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/output.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/report.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/selenium-screenshot-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/selenium-screenshot-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/selenium-screenshot-3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/selenium-screenshot-4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/selenium-screenshot-5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/selenium-screenshot-6.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/enums/enum.robot" beforeDir="false" afterPath="$PROJECT_DIR$/test/enums/enum.robot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/pages/mainpage.robot" beforeDir="false" afterPath="$PROJECT_DIR$/test/pages/mainpage.robot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/stepdefinitions/mainPageStepDefinitions.robot" beforeDir="false" afterPath="$PROJECT_DIR$/test/stepdefinitions/mainPageStepDefinitions.robot" afterDir="false" />
@@ -36,6 +34,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -56,7 +55,7 @@
       <recent name="$PROJECT_DIR$/test/drivers" />
     </key>
   </component>
-  <component name="RunManager" selected="Robot.FeedbackTestSuite.robot">
+  <component name="RunManager" selected="Robot.GET.robot">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="AlbertHeijnRobotFramework" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -78,7 +77,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="FeedbackTestSuite.robot" type="RobotRunConfiguration" factoryName="RobotRunConfiguration" temporary="true">
+    <configuration name="Do a GET Request and validate the response code and response body" type="RobotRunConfiguration" factoryName="RobotRunConfiguration" temporary="true">
       <module name="AlbertHeijnRobotFramework" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -91,7 +90,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="robot.run" />
-      <option name="PARAMETERS" value="--suite &quot;AlbertHeijnRobotFramework.test.testcases.FeedbackTestSuite&quot; ." />
+      <option name="PARAMETERS" value="--test &quot;AlbertHeijnRobotFramework.test.testcases.API.GET.Do a GET Request and validate the response code and response body&quot; ." />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="true" />
       <option name="MODULE_MODE" value="true" />
@@ -99,7 +98,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="User gives a 4 star feedback on 'De gehele website' categories" type="RobotRunConfiguration" factoryName="RobotRunConfiguration" temporary="true">
+    <configuration name="Do a GET Request and validate the response code to be 200" type="RobotRunConfiguration" factoryName="RobotRunConfiguration" temporary="true">
       <module name="AlbertHeijnRobotFramework" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -112,7 +111,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="robot.run" />
-      <option name="PARAMETERS" value="--test &quot;AlbertHeijnRobotFramework.test.testcases.FeedbackTestSuite.User gives a 4 star feedback on 'De gehele website' categories&quot; ." />
+      <option name="PARAMETERS" value="--test &quot;AlbertHeijnRobotFramework.test.testcases.API.GET.Do a GET Request and validate the response code to be 200&quot; ." />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="true" />
       <option name="MODULE_MODE" value="true" />
@@ -120,7 +119,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="User gives a 5 star feedback on 'Deze specifieke pagina' categories" type="RobotRunConfiguration" factoryName="RobotRunConfiguration" temporary="true">
+    <configuration name="GET homepage returns statuscode 200" type="RobotRunConfiguration" factoryName="RobotRunConfiguration" temporary="true">
       <module name="AlbertHeijnRobotFramework" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -133,7 +132,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="robot.run" />
-      <option name="PARAMETERS" value="--test &quot;AlbertHeijnRobotFramework.test.testcases.FeedbackTestSuite.User gives a 5 star feedback on 'Deze specifieke pagina' categories&quot; ." />
+      <option name="PARAMETERS" value="--test &quot;AlbertHeijnRobotFramework.test.testcases.API.GET.GET homepage returns statuscode 200&quot; ." />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="true" />
       <option name="MODULE_MODE" value="true" />
@@ -141,7 +140,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="User gives a 5 star feedback on all categories" type="RobotRunConfiguration" factoryName="RobotRunConfiguration" temporary="true">
+    <configuration name="GET.robot" type="RobotRunConfiguration" factoryName="RobotRunConfiguration" temporary="true">
       <module name="AlbertHeijnRobotFramework" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -154,7 +153,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="robot.run" />
-      <option name="PARAMETERS" value="--test &quot;AlbertHeijnRobotFramework.test.testcases.FeedbackTestSuite.User gives a 5 star feedback on all categories&quot; ." />
+      <option name="PARAMETERS" value="--suite &quot;AlbertHeijnRobotFramework.test.testcases.API.GET&quot; ." />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="true" />
       <option name="MODULE_MODE" value="true" />
@@ -162,7 +161,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="User opens 'klantenservice pagina' from feedback form" type="RobotRunConfiguration" factoryName="RobotRunConfiguration" temporary="true">
+    <configuration name="Navigate back to homepage from loginpage" type="RobotRunConfiguration" factoryName="RobotRunConfiguration" temporary="true">
       <module name="AlbertHeijnRobotFramework" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -175,7 +174,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="robot.run" />
-      <option name="PARAMETERS" value="--test &quot;AlbertHeijnRobotFramework.test.testcases.FeedbackTestSuite.User opens 'klantenservice pagina' from feedback form&quot; ." />
+      <option name="PARAMETERS" value="--test &quot;AlbertHeijnRobotFramework.test.testcases.LoginTestSuite.Navigate back to homepage from loginpage&quot; ." />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="true" />
       <option name="MODULE_MODE" value="true" />
@@ -185,11 +184,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Robot.FeedbackTestSuite.robot" />
-        <item itemvalue="Robot.User opens 'klantenservice pagina' from feedback form" />
-        <item itemvalue="Robot.User gives a 4 star feedback on 'De gehele website' categories" />
-        <item itemvalue="Robot.User gives a 5 star feedback on 'Deze specifieke pagina' categories" />
-        <item itemvalue="Robot.User gives a 5 star feedback on all categories" />
+        <item itemvalue="Robot.GET.robot" />
+        <item itemvalue="Robot.Do a GET Request and validate the response code to be 200" />
+        <item itemvalue="Robot.Do a GET Request and validate the response code and response body" />
+        <item itemvalue="Robot.GET homepage returns statuscode 200" />
+        <item itemvalue="Robot.Navigate back to homepage from loginpage" />
       </list>
     </recent_temporary>
   </component>
@@ -203,5 +202,16 @@
       <updated>1686495244532</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

@@ -2,6 +2,7 @@
 Documentation    Step definitions for mainpage
 Library          SeleniumLibrary
 Resource         test/pages/mainpage.robot
+Resource         test/testcases/ProductTestSuite.robot
 Resource         ../enums/enum.robot
 
 
@@ -19,16 +20,18 @@ Open cookie settings
     Click Element   ${cookie_settings_btn}
 
 Accept social media cookies
+    Wait Until Element Is Visible    ${accept_socialmedia_cookies_btn}  timeout=10s
     Click Element    ${accept_socialmedia_cookies_btn}
 
 Accept personalised ads cookies
+    Wait Until Element Is Visible    ${accept_personalised_ads_cookies_btn}
     Click Element    ${accept_personalised_ads_cookies_btn}
 
 Decline socal media cookies
-    Click Element
+    Click Element   ${decline_socialmedia_cookies_btn}
 
 Decline personalised ads cookies
-    Click Element
+    Click Element   ${decline_personalised_ads_cookies_btn}
 
 Confirm cookie settings
     Click Element    ${confirm_cookie_settings_btn}
@@ -87,3 +90,11 @@ Send feedback form
 
 Open 'klantenservice pagina'
     Click Element        ${klantenservice_pagina_btn}
+
+Open Login page
+    #Mouse Over          ${dropdown_menu_login}
+    Click Element       ${Login_page_btn}
+
+Search for product
+   Input Text    ${search_product_btn}  ${melk}
+   Press Key    ${search_product_btn}   \\13   #\\13 is de ASCII code voor 'Enter/RETURN' key
